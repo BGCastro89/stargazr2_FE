@@ -91,10 +91,21 @@ h2 {
 
 
 /* Sidebar */
-#sidebar{
-  
-}
 
+
+/* Widen Sidebar to 50px */
+.leaflet-sidebar.collapsed, .leaflet-sidebar-close, .leaflet-sidebar-tabs, .leaflet-sidebar-tabs, .leaflet-sidebar-tabs > ul{
+  width: 50px;
+}
+.leaflet-sidebar-left.collapsed ~ .leaflet-control-container .leaflet-left{
+  left: 60px;
+}
+.leaflet-sidebar-left .leaflet-sidebar-content{
+  left: 50px;
+}
+.leaflet-sidebar-tabs > li > a, .leaflet-sidebar-tabs > ul > li > a {
+  line-height: 50px;
+}
 
 
 /* Sidebar Colors */
@@ -144,4 +155,5 @@ a.leaflet-control-zoom-in.leaflet-disabled, a.leaflet-control-zoom-out.leaflet-d
 
 .fa{
   color: #CCC;
+  font-size: 1.5em;
 }
