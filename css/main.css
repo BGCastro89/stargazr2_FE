@@ -11,9 +11,28 @@ html, body, #map {
   color: #EEE;
 }
 
+h1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 /* Map & Header */
 #map-header{
   height: 100px;
+  display: flex;
+  /* flex-direction: row; */
+}
+#header-left{
+  width: 50%
+}
+#header-left{
+  width: 50%
+}
+#header-coords-container{
+  display: flex;
+}
+#selected-coords-container{
+  margin-left: 10px;
 }
 
 #map{
