@@ -14,19 +14,25 @@ html, body, #map {
 h1 {
   margin-top: 5px;
   margin-bottom: 5px;
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
 }
 
 /* Map & Header */
 #map-header{
+  padding: 10px;
   height: 100px;
   display: flex;
-  /* flex-direction: row; */
 }
+
+
 #header-left{
-  width: 50%
+  width: 75%
 }
-#header-left{
-  width: 50%
+#header-right{
+  width: 25%
 }
 #header-coords-container{
   display: flex;
@@ -34,15 +40,62 @@ h1 {
 #selected-coords-container{
   margin-left: 10px;
 }
+#get-report-btn{
+  /* background-color: #0006b3; */
+  background-color: #333;
+  border-color: #CCC;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  border-radius: 25px;
+  font-size: 2em;
+  margin-top: 2px;
+  width: 75%;
+  height: 75px;
+}
+
+
+@media (max-width:450px) {
+  h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.75em;
+  }
+  h2 {
+    font-size: 1.25em;
+  }
+  #map-header{
+    height: 150px;
+    flex-direction: column;
+  }
+  #header-right{
+    width: 100%;
+    text-align: center;
+  }
+  #get-report-btn{
+    margin-top: 0px;
+    width: 80%;
+  }
+
+
+}
+
+
+
+
 
 #map{
   height: calc( 100vh - 100px ); 
 }
 
+
+
+
 /* Sidebar */
 #sidebar{
   
 }
+
+
 
 /* Sidebar Colors */
 .leaflet-sidebar-content{

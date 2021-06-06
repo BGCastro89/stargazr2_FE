@@ -4,10 +4,29 @@
     <title>sidebar-v2 example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" href="leaflet-sidebar-v2-master/css/leaflet-sidebar.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="leaflet-sidebar-v2-master/css/leaflet-sidebar.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    <!-- Material Web Components and Roboto/Material Icons fonts. -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" type="text/css"> 
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> -->
+<!-- 
+    <link rel="stylesheet" href="mwc/material-components-web.min.css" type="text/css">
+    <script src="mwc/material-components-web.min.js"></script> -->
+
+
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons&display=block" > -->
+
     
     <link rel="stylesheet" href="css/L.Control.Range.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -26,7 +45,7 @@
             </div>
         </div>
         <div id="header-right">
-            <button> GET REPORT! </button>
+            <button type="button" class="btn btn-primary" id="get-report-btn"> GET REPORT! </button>
         </div>
     </div>
 
