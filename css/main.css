@@ -47,12 +47,16 @@ h2 {
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   border-radius: 25px;
-  font-size: 2em;
+  font-size: 1.75em;
   margin-top: 2px;
   width: 75%;
   height: 75px;
 }
-
+@media (max-width:750px) {
+  #get-report-btn{
+  font-size: 1.5em;
+  }
+}
 
 @media (max-width:450px) {
   h1 {
@@ -72,7 +76,8 @@ h2 {
     text-align: center;
   }
   #get-report-btn{
-    margin-top: 0px;
+    height: 50px;
+    margin-top: 5px;
     width: 80%;
   }
 
