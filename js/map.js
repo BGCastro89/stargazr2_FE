@@ -65,6 +65,27 @@ var options = {
 };
 L.control.layers(baseLayers, overlays, options).addTo(map);
 
+function formatLat(num){
+    if (num < 0){
+        number = Number(num).toFixed(4) + "\u00B0 S";
+    }
+    else{
+        number = Number(num).toFixed(4) + "\u00B0 N";
+    }
+    return number
+
+}
+function formatLng(num) {
+    if (num < 0){
+        number = Number(num).toFixed(4) + "\u00B0 W";
+    }
+    else{
+        number = Number(num).toFixed(4) + "\u00B0 E";
+    }
+    return number
+
+}
+
 // Generates marker and gets coordinates on each click
 var newMarker = {}
 function addMarker(e) {
@@ -75,8 +96,10 @@ function addMarker(e) {
     };
     newMarker = new L.marker(e.latlng).addTo(map);
     var coords = { "lat": e.latlng.lat, "lng": e.latlng.lng }
-    var coods_text = "Lat: " + Number(coords.lat).toFixed(4) + ", Lng: " + Number(coords.lng).toFixed(4);
-    $("#selected-coords").text(coods_text)
+    var coodrs_text_lat = "Lat: " + formatLat(coords.lat);
+    var coords_text_lng = "Lng: " + formatLng(coords.lng);
+    $("#selected-coords-lat").text(coodrs_text_lat);
+    $("#selected-coords-lng").text(coords_text_lng);
     console.log(coords)
 }
 map.on('click', addMarker);

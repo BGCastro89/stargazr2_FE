@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>sidebar-v2 example</title>
+    <title>StarGAZR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -36,11 +36,13 @@
     <!-- optionally define the sidebar content via HTML markup -->
     <div id="map-header">
         <div id="header-left">
-            <h1> STARgazr </h1>
+            <h1> StarGAZR </h1>
             <div id="header-coords-container">
-                <h2> Selected Coordinates: </h2>
+                <h2 id="selected-coords-header"> Selected Coordinates: </h2>
                 <div id="selected-coords-container">
-                    <h2 id="selected-coords"> </h2>
+                    <h2 id="selected-coords-lat"> </h2>
+                    &nbsp;
+                    <h2 id="selected-coords-lng"> </h2>
                 </div>
             </div>
         </div>
