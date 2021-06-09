@@ -1,6 +1,14 @@
+// require('dotenv').config();
+// console.log(process.env);
+
 // Base Tileset Layers
 mapLink = '<a href="http://openstreetmap.org" target="_blank">OpenStreetMap</a>';
 infoLink = '<a href="https://djlorenz.github.io/astronomy/lp2016/" target="_blank">Light Pollution Atlas Information</a>';
+
+var mapbox = L.tileLayer('https://api.mapbox.com/styles/v1/bgcastro/xxxx/tiles/256/{z}/{x}/{y}?access_token=xxxx', {
+    attribution: 'Mapbox Test',
+    maxZoom: 17,
+})
 
 var standard = L.tileLayer(
     'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -52,6 +60,7 @@ sidebar.options.autopan = true;
 
 //Add all layers and overlay to layer control and add to map
 var baseLayers = {
+    "Mapbox Dark": mapbox,
     "OpenStreetMap": standard,
     "Esri WorldImagery": Esri_WorldImagery,
     "Esri WorldTopoMap": Esri_WorldTopoMap,
