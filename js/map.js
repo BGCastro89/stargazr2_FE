@@ -67,7 +67,7 @@ L.control.layers(baseLayers, overlays, options).addTo(map);
 
 function formatLat(num){
     if (num < 0){
-        number = Number(num).toFixed(4) + "\u00B0 S";
+        number = Math.abs(Number(num).toFixed(4)) + "\u00B0 S";
     }
     else{
         number = Number(num).toFixed(4) + "\u00B0 N";
@@ -77,7 +77,7 @@ function formatLat(num){
 }
 function formatLng(num) {
     if (num < 0){
-        number = Number(num).toFixed(4) + "\u00B0 W";
+        number = Math.abs(Number(num).toFixed(4)) + "\u00B0 W";
     }
     else{
         number = Number(num).toFixed(4) + "\u00B0 E";
@@ -96,8 +96,8 @@ function addMarker(e) {
     };
     newMarker = new L.marker(e.latlng).addTo(map);
     var coords = { "lat": e.latlng.lat, "lng": e.latlng.lng }
-    var coodrs_text_lat = "Lat: " + formatLat(coords.lat);
-    var coords_text_lng = "Lng: " + formatLng(coords.lng);
+    var coodrs_text_lat = formatLat(coords.lat)+",";
+    var coords_text_lng = formatLng(coords.lng);
     $("#selected-coords-lat").text(coodrs_text_lat);
     $("#selected-coords-lng").text(coords_text_lng);
     console.log(coords)

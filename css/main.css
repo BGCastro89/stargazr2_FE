@@ -12,30 +12,68 @@ html, body, #map {
 }
 
 h1 {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  /* margin-top: 5px;
+  margin-bottom: 5px; */
   font-size: 2em;
 }
 h2 {
   font-size: 1.5em;
 }
 
-/* Map & Header */
+
+
+/* Header */
 #map-header{
   padding: 10px;
-  height: 100px;
+  height: 75px;
   display: flex;
 }
-
-
 #header-left{
-  width: 75%
+  width: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header-center{
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #header-right{
-  width: 25%
+  width: 25%;
+  text-align: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#selected-coords-header{
+  margin-bottom: 0px;
+  font-size: 1.4em;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.selected-coords-text{
+  margin-bottom: 0px;
+  font-size: 1.4em;
+  padding-right: 5px;
 }
 #header-coords-container{
   display: flex;
+  border:1px solid white;
+  width: 80%;
+  height: 50px;
+  justify-content: left;
+  align-items: center;
+  background-color: #333;
+}
+#selected-coords-header-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid white;
+  width: 200px;
+  height: 50px;
 }
 #selected-coords-container{
   margin-left: 10px;
@@ -43,70 +81,99 @@ h2 {
 #selected-coords-container h2{
   display: inline-block;
 }
-
-
-
-
 #get-report-btn{
-  /* background-color: #0006b3; */
   background-color: #333;
   border-color: #CCC;
-  font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
-  border-radius: 25px;
   font-size: 1.75em;
-  margin-top: 2px;
-  width: 75%;
-  height: 75px;
+  width: 90%;
+  height: 50px;
+  right: 10px;
 }
+
+
+
+
+/* Map */
+
+#map{
+  height: calc( 100vh - 75px ); 
+}
+
+
+/* Media Queries on Header and Map */
+
+@media (max-width: 973px){
+  #selected-coords-header-container{
+    width: 120px;
+  }
+}
+
+@media (max-width:850px) {
+  #get-report-btn{
+    /* margin-top: 0px; */
+    width: 100%;
+  }
+}
+
 @media (max-width:750px) {
   #get-report-btn{
   font-size: 1.5em;
   }
 }
 
-@media (max-width:450px) {
+@media (max-width:650px) {
   h1 {
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     font-size: 1.75em;
   }
   h2 {
     font-size: 1.25em;
   }
   #header-coords-container{
-    height: 54px;
+    width: 100%;
+    margin: 5px;
   }
   #selected-coords-header{
     width: 100px;
+    font-size: 1.2em;
   }
   #map-header{
     height: 155px;
     flex-direction: column;
   }
+  #map{
+    height: calc( 100vh - 155px ); 
+  }
   #header-left{
     width: 100%;
   }
+  #header-center{
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    width: 100%;
+  }
   #header-right{
+    flex-wrap: wrap;
+    flex-basis: 100%;
     width: 100%;
     text-align: center;
   }
   #get-report-btn{
-    height: 50px;
-    margin-top: 0px;
-    width: 80%;
+    margin: 5px;
+    height: 40px;
+    width: 100%;
   }
-
-
+}
+@media (max-width:480px) {
+  .selected-coords-text{
+    font-size: 1.2em;
+  }
 }
 
 
 
-
-
-#map{
-  height: calc( 100vh - 100px ); 
-}
 
 
 

@@ -33,21 +33,25 @@
 
 </head>
 <body>
-    <!-- optionally define the sidebar content via HTML markup -->
     <div id="map-header">
+        <!-- optionally define the sidebar content via HTML markup -->
         <div id="header-left">
             <h1> StarGAZR </h1>
-            <div id="header-coords-container">
-                <h2 id="selected-coords-header"> Selected Coordinates: </h2>
+        </div>
+
+        <div ID="header-center">
+            <div  id="header-coords-container">
+                <div id="selected-coords-header-container"><h2 id="selected-coords-header"> Selected Coordinates </h2>
+                </div>
                 <div id="selected-coords-container">
-                    <h2 id="selected-coords-lat"> </h2>
-                    &nbsp;
-                    <h2 id="selected-coords-lng"> </h2>
+                    <h2 class="selected-coords-text" id="selected-coords-lat"> </h2>
+                    <h2 class="selected-coords-text" id="selected-coords-lng"> </h2>
                 </div>
             </div>
         </div>
+
         <div id="header-right">
-            <button type="button" class="btn btn-primary" id="get-report-btn"> GET REPORT! </button>
+            <button type="button" href="#data" class="btn btn-primary" id="get-report-btn"> STARGAZE! </button>
         </div>
     </div>
 
@@ -61,8 +65,10 @@
             <div class="leaflet-sidebar-tabs">
                 <!-- top aligned tabs -->
                 <ul role="tablist">
-                    <li><a href="#home" role="tab"><i class="fa fa-bars active"></i></a></li>
-                    <li><a href="#autopan" role="tab"><i class="fa fa-arrows"></i></a></li>
+                    <li><a href="#data" role="tab"><i class="fa fa-bars active"></i></a></li>
+                    <li><a href="#help" role="tab"><i class="fa fa-question"></i></a></li>
+                    <li><a href="#about" role="tab"><i class="fa fa-info"></i></a></li>
+                    <li><a href="#whateverelse" role="tab"><i class="fa fa-circle"></i></a></li>
                 </ul>
 
                 <!-- bottom aligned tabs -->
@@ -73,7 +79,7 @@
 
             <!-- panel content -->
             <div class="leaflet-sidebar-content">
-                <div class="leaflet-sidebar-pane" id="home">
+                <div class="leaflet-sidebar-pane" id="data">
                     <h1 class="leaflet-sidebar-header">
                         Site Stargazing Report
                         <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
@@ -88,19 +94,28 @@
                     <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                 </div>
 
-                <div class="leaflet-sidebar-pane" id="autopan">
+                <div class="leaflet-sidebar-pane" id="help">
                     <h1 class="leaflet-sidebar-header">
-                        autopan
+                        How to use this site
                         <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
                     </h1>
-                    <p>
-                        <code>Leaflet.control.sidebar({ autopan: true })</code>
-                        makes shure that the map center always stays visible.
-                    </p>
                     <p>
                         The autopan behviour is responsive as well.
                         Try opening and closing the sidebar from this pane!
                     </p>
+                </div>
+
+                <div class="leaflet-sidebar-pane" id="about">
+                    <h1 class="leaflet-sidebar-header">
+                        About
+                        <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+                    </h1>
+                    <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+                        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                        sanctus est Lorem ipsum dolor sit amet.</p>
                 </div>
 
                 <div class="leaflet-sidebar-pane" id="messages">
