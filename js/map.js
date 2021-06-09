@@ -112,3 +112,10 @@ function addMarker(e) {
     console.log(coords)
 }
 map.on('click', addMarker);
+
+
+//Stargaze Button Click: Open thing, call API (eventually)
+function openSidebar(){
+    sidebar.open('data');
+}
+$("#get-report-btn").on('click', openSidebar);
