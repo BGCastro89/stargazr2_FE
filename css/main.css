@@ -194,6 +194,11 @@ h2 {
 .leaflet-sidebar-tabs > li > a, .leaflet-sidebar-tabs > ul > li > a {
   line-height: 50px;
 }
+@media (max-width: 767px){
+  .leaflet-sidebar-left.collapsed ~ .leaflet-control-container .leaflet-left{
+  left: 50px;
+}
+}
 
 
 /* Sidebar Colors */
