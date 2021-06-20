@@ -243,6 +243,12 @@ a.leaflet-control-zoom-in.leaflet-disabled, a.leaflet-control-zoom-out.leaflet-d
 }
 
 
+/* Help Section */
+.table{
+  color: #AAA
+}
+
+
 .fa{
   color: #CCC;
   font-size: 1.5em;
