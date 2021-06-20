@@ -5,12 +5,17 @@
 mapLink = '<a href="http://openstreetmap.org" target="_blank">OpenStreetMap</a>';
 infoLink = '<a href="https://djlorenz.github.io/astronomy/lp2016/" target="_blank">Light Pollution Atlas Information</a>';
 
-var mapbox = L.tileLayer('https://api.mapbox.com/styles/v1/bgcastro/xxxx/tiles/256/{z}/{x}/{y}?access_token=xxxx', {
-    attribution: 'Mapbox Test',
+var mapbox_dark = L.tileLayer('https://api.mapbox.com/styles/v1/bgcastro/ckq4hds6m370n17o3e8doenww/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmdjYXN0cm8iLCJhIjoiY2twbjlhdWV4MDZqdDJwbzNvOG55dW4ydiJ9.78LWX5FlEiAMxVw47jJq5A', {
+    attribution: '<a href="https://www.mapbox.com">Mapbox Studio</a>',
     maxZoom: 17,
 })
 
-var standard = L.tileLayer(
+var mapbox_red = L.tileLayer('https://api.mapbox.com/styles/v1/bgcastro/ckppv2b0n05ie17qmkqtoowq5/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmdjYXN0cm8iLCJhIjoiY2twbjlhdWV4MDZqdDJwbzNvOG55dW4ydiJ9.78LWX5FlEiAMxVw47jJq5A', {
+    attribution: '<a href="https://www.mapbox.com">Mapbox Studio</a>',
+    maxZoom: 17,
+})
+
+var open_street = L.tileLayer(
     'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; ' + mapLink + ' Contributors | ' + infoLink,
     maxZoom: 17,
@@ -26,7 +31,7 @@ var Esri_WorldTopoMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
     maxZoom: 17,
 });
 
-var topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+var open_topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>) | ' + infoLink,
     maxZoom: 17,
 })
@@ -49,7 +54,7 @@ var map = L.map('map', {
     zoom: 2,
     maxZoom: 17,
     minZoom: 3,
-    layers: [standard, lightpollution2016]
+    layers: [mapbox_dark, lightpollution2016]
 });
 
 // Create and add sidebar
@@ -60,11 +65,12 @@ sidebar.options.autopan = true;
 
 //Add all layers and overlay to layer control and add to map
 var baseLayers = {
-    "Mapbox Dark": mapbox,
-    "OpenStreetMap": standard,
-    "Esri WorldImagery": Esri_WorldImagery,
-    "Esri WorldTopoMap": Esri_WorldTopoMap,
-    "OpenTopoMap": topo
+    "Dark Night Vision": mapbox_dark,
+    "Red Night Vision": mapbox_red,
+    "Satellite (Esri)": Esri_WorldImagery,
+    "Topographic (Esri)": Esri_WorldTopoMap,
+    "OpenStreetMap": open_street,
+    "OpenTopoMap": open_topo
 };
 var overlays = {
     "2016 light pollution": lightpollution2016
