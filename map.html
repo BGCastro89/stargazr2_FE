@@ -106,7 +106,7 @@
                     <h5> How to read the Light Pollution Map </h5>
                     
                     <p> The color-coded map uses an <a href="https://djlorenz.github.io/astronomy/lp2006/colors.html">expanded version</a> 
-                        of the <a href="https://en.wikipedia.org/wiki/Bortle_scale">Bortle Scale</a>, which measures Light Pollution on a scale of 1-6. 
+                        of the <a href="https://en.wikipedia.org/wiki/Bortle_scale">Bortle Scale</a>, which measures Light Pollution on a scale of 1-9. 
                         The Light Pollution Multiplier (LPX) is given in terms of multiples of additional brightness from a natural dark sky,
                         where 0 is no additional brightness (perfect dark sky), and inner cities have skies over 40x brighter than natural.
                     </p><p>
@@ -126,40 +126,94 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th id="bortle1-1">1</th>
+                                <th class="bortle-color" id="bortle1-1"></th>
                                 <td >Perfect</td>
-                                <td >Otto</td>
+                                <td >0</td>
                                 <td >@mdo</td>
                             </tr>
                             <tr>
-                                <th id="bortle2-1">2</th>
+                                <th class="bortle-color" id="bortle2-1"></th>
                                 <td>Extremely Dark</td>
-                                <td>Thornton</td>
+                                <td>0.01 - 0.06</td>
                                 <td>@fat</td>
                             </tr>
                             <tr>
-                                <th id="bortle2-2">3</th>
+                                <th class="bortle-color" id="bortle2-2"></th>
                                 <td>Very Dark</td>
-                                <td>the Bird</td>
+                                <td>0.06 - 0.11</td>
                                 <td>@twitter</td>
                             </tr>
                             <tr>
-                                <th id="bortle3-1">1</th>
+                                <th class="bortle-color" id="bortle3-1"></th>
                                 <td>Dark</td>
-                                <td>Otto</td>
+                                <td>0.11 - 0.19</td>
                                 <td>@mdo</td>
                             </tr>
                             <tr>
-                                <th id="bortle3-2">2</th>
-                                <td>Dark</td>
-                                <td>Thornton</td>
+                                <th class="bortle-color" id="bortle3-2"></th>
+                                <td>Dark with Low LP</td>
+                                <td>0.19 - 0.33</td>
                                 <td>@fat</td>
                             </tr>
                             <tr>
-                                <th id="bortle1-1">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
+                                <th class="bortle-color" id="bortle4-1"></th>
+                                <td>Low LP</td>
+                                <td>0.33 - 0.58</td>
                                 <td>@twitter</td>
+                            </tr>
+                            <tr>
+                                <th class="bortle-color" id="bortle4-1"></th>
+                                <td>Moderatly Low LP</td>
+                                <td>0.58 - 1</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th class="bortle-color" id="bortle5-1"></th>
+                                <td>Moderatle LP</td>
+                                <td>1 - 1.7</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th class="bortle-color" id="bortle5-2"></th>
+                                <td>Moderatle LP</td>
+                                <td>1.7 - 3</td>
+                                <td>@twitter</td>
+                            </tr>
+                            <tr>
+                                <th class="bortle-color" id="bortle6-1">1</th>
+                                <td>Moderatley High LP</td>
+                                <td>3 - 5.2</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th class="bortle-color" id="bortle6-2">2</th>
+                                <td>Moderatley High LP</td>
+                                <td>5.2 - 9</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th class="bortle-color" id="bortle7-1"></th>
+                                <td>High LP</td>
+                                <td>9 - 15.6</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th class="bortle-color" id="bortle7-2"></th>
+                                <td>Very High LP</td>
+                                <td>15.6 - 27</td>
+                                <td>@twitter</td>
+                            </tr>
+                            <tr>
+                                <th class="bortle-color" id="bortle8-1">1</th>
+                                <td>Extremely High LP</td>
+                                <td>27 - 46.8</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th class="bortle-color" id="bortle9-1">2</th>
+                                <td>Extremely High LP</td>
+                                <td>46.8+</td>
+                                <td>@fat</td>
                             </tr>
                         </tbody>
                     </table>
