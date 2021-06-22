@@ -253,3 +253,59 @@ a.leaflet-control-zoom-in.leaflet-disabled, a.leaflet-control-zoom-out.leaflet-d
   color: #CCC;
   font-size: 1.5em;
 }
+
+/* Bortle Color Key */
+#bortle-desc{
+  width: 140px;
+}
+#bortle-num{
+  width: 40px;
+}
+#bortle-color{
+    border: 1px solid #f00 !important;
+}
+#bortle1-1{
+  background-color: #000000;
+}
+#bortle2-1{
+  background-color: #232323;
+}
+#bortle2-2{
+  background-color: #464646;
+}
+#bortle3-1{
+  background-color: #012584;
+}
+#bortle3-2{
+  background-color: #013EDC;
+}
+#bortle4-1{
+  background-color: #316A1B;
+}
+#bortle4-2{
+  background-color: #53B12E;
+}
+#bortle5-1{
+  background-color: #908C2E;
+}
+#bortle5-2{
+  background-color: #CEC842;
+}
+#bortle6-1{
+  background-color: #A25827;
+}
+#bortle6-2{
+  background-color: #D87635;
+}
+#bortle7-1{
+  background-color: #9A2421;
+}
+#bortle7-2{
+  background-color: #ED3833;
+}
+#bortle8-1{
+  background-color: #BFBFBF;
+}
+#bortle9-1{
+  background-color: #ffffff;
+}
