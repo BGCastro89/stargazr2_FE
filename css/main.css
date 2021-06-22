@@ -176,7 +176,12 @@ h2 {
 
 
 /* Sidebar */
-
+.leaflet-sidebar-pane p {
+  width: 95%;
+}
+#sample-csc {
+  width: 100%;
+}
 
 /* Widen Sidebar to 50px */
 .leaflet-sidebar.collapsed, .leaflet-sidebar-close, .leaflet-sidebar-tabs, .leaflet-sidebar-tabs, .leaflet-sidebar-tabs > ul{
@@ -242,27 +247,32 @@ a.leaflet-control-zoom-in.leaflet-disabled, a.leaflet-control-zoom-out.leaflet-d
     color: #AAA;
 }
 
-
-/* Help Section */
-.table{
-  color: #AAA
-}
-
-
 .fa{
   color: #CCC;
   font-size: 1.5em;
 }
 
-/* Bortle Color Key */
-#bortle-desc{
-  width: 140px;
+
+
+/* Help Section */
+.table{
+  color: #AAA;
+  width: 95%
 }
-#bortle-num{
+
+
+/* Bortle Color Key */
+.bortle-desc{
+  width: 155px;
+}
+.bortle-num{
   width: 40px;
 }
-#bortle-color{
-    border: 1px solid #f00 !important;
+.bortle-color{
+    border: 1px solid #fff;
+}
+.table td{
+    border: 1px solid #fff;
 }
 #bortle1-1{
   background-color: #000000;
@@ -309,3 +319,21 @@ a.leaflet-control-zoom-in.leaflet-disabled, a.leaflet-control-zoom-out.leaflet-d
 #bortle9-1{
   background-color: #ffffff;
 }
+
+/* Leaflet-Sidebar Overrides */
+@media (min-width: 768px) and (max-width: 991px) {
+  .leaflet-sidebar {
+    width: 345px;
+    max-width: 345px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .leaflet-sidebar-pane {
+    min-width: 305px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .leaflet-sidebar-left ~ .leaflet-control-container .leaflet-left {
+    left: 355px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .leaflet-sidebar-right ~ .leaflet-control-container .leaflet-right {
+    right: 355px; } }
