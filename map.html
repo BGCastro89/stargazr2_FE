@@ -85,13 +85,12 @@
                         <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
                     </h1>
 
-                   <p>Compatible with version 0.7 and 1.x (tested up to 1.6.0)</p>
-                    <p><b>Select the other panes for a showcase of each feature.</b></p>
-
-                    <!-- <h2>Selected Coordinates:</h2> -->
-                    <!-- <p id="selected-coords"> </p> -->
-
-                    <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <br>
+                    <p id="no-loc-msg"><strong>No location selected. Click on the map to select a spot, then press "Stargaze!".</strong></p>
+                    
+                    <h4>Selected Coordinates:</h4>
+                    <p id="selected-coords-sidebar"> </p>
+                    
                 </div>
 
                 <div class="leaflet-sidebar-pane" id="help">
@@ -101,11 +100,11 @@
                     </h1>
                     <br>
                     <p> <strong>
-                        Click anywhere on the map to select a spot where you are interested in stargazing. Press the "Stargaze!" button, and the
-                        results will appear in this sidebar.
+                        Click anywhere on the map to select a spot where you are interested in stargazing. Press the "Stargaze!" button, and a
+                        forcast for stargazing conditions will appear in this sidebar.
                     </strong></p>
                     
-
+                    <br>
                     <h5> How to read the Light Pollution Map </h5>
                     
                     <p> The color-coded map uses an <a href="https://djlorenz.github.io/astronomy/lp2006/colors.html">expanded version</a> 
@@ -115,8 +114,6 @@
                     </p><p>
                         Note that Light Pollution measurements are regional estimations based on sattelite data taken in 2016, and may not accurately
                         reflect the real conditions.
-                    </p><p>
-                        A key is below:
                     </p>
                     <table class="table">
                         <thead>
@@ -221,20 +218,21 @@
                         </tbody>
                     </table>
 
+                    <br>
                     <h5> How to read a Clear Sky Chart</h5>
                     <p>
                         <a href=https://www.cleardarksky.com/c/CEKMsObNYkey.html> <img id="sample-csc" src="https://www.cleardarksky.com/c/CEKMsObNYcs0.gif?1"> </a>
                         The Clear Sky Chart gives astronomical seeing conditions at a glance. 
                         
                         Each chart has an abridged version (shown above) and a full version, 
-                        which can be seen on clicking on the abridged chart.
+                        which can be seen on clicking on an abridged chart.
 
                         They can be hard to read, but as a rule of thumb, dark blue is good, and white/gray is bad,
                         with the Rows "Cloud Cover" and "Transparancy" on the full chart being most important.
 
                         A complete guide to reading them can be found <a href="https://www.cleardarksky.com/c/Ottawakey.html"> here </a>.
                     </p>
-                    
+
                 </div>
 
                 <div class="leaflet-sidebar-pane" id="about">
@@ -249,6 +247,7 @@
                         diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
                         sanctus est Lorem ipsum dolor sit amet.</p>
                 </div>
+
 
                 <div class="leaflet-sidebar-pane" id="messages">
                     <h1 class="leaflet-sidebar-header">Messages<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
