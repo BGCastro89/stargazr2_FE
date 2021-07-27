@@ -103,6 +103,7 @@ function formatLng(num) {
 
 // Generates marker and gets coordinates on each click
 var newMarker = {}
+var coords = {}
 function addMarker(e) {
 
     // Add marker to map at click location;
@@ -110,18 +111,64 @@ function addMarker(e) {
         map.removeLayer(newMarker);
     };
     newMarker = new L.marker(e.latlng).addTo(map);
-    var coords = { "lat": e.latlng.lat, "lng": e.latlng.lng }
+    coords = { "lat": e.latlng.lat, "lng": e.latlng.lng }
     var coodrs_text_lat = formatLat(coords.lat)+",";
     var coords_text_lng = formatLng(coords.lng);
     $("#selected-coords-lat").text(coodrs_text_lat);
     $("#selected-coords-lng").text(coords_text_lng);
+    $("#selected-coords-sidebar").text(coodrs_text_lat + coords_text_lng);
     console.log(coords)
 }
 map.on('click', addMarker);
 
 
-//Stargaze Button Click: Open thing, call API (eventually)
-function openSidebar(){
-    sidebar.open('data');
+function displayData(response_json){
+    CDSChart = response_json.CDSChart
+    cloudCover = response_json.cloudCover * 100 + "%"
+    drivingDistance = response_json.drivingDistance
+    elevation = Math.round(response_json.elevation) + " m"
+    humidity = response_json.humidity * 100 + "%"
+    lightPol = response_json.lightPol
+    precipProb = response_json.precipProb
+    siteQuality = Math.round(response_json.siteQuality) 
+    siteQualityDiscript = response_json.siteQualityDiscript
+    status = response_json.status
+    lunarphase = (response_json.lunarphase)*100 + "% Full"
+
+    
+
+
+
+    $("#sg-rate-cloud").text(cloudCover)
+    $("#sg-rate-lp").text(lightPol)
+    $("#sg-rate-humidity").text(humidity)
+    $("#sg-rate-elev").text(elevation)
+    $("#sg-rate-overall-val").text(siteQuality)
+    $("#sg-rate-overall-desc").text(siteQualityDiscript)
+    $("#sg-rate-lunar").text(lunarphase)
+
+    
 }
-$("#get-report-btn").on('click', openSidebar);
+
+
+//Stargaze Button Click: Open thing, call API (eventually)
+function getSGReport(lat, lng){
+    //https://stargazr-5l7reasoza-uc.a.run.app/?lat_selected=37.75&lng_selected=-122.45
+    var lat = coords.lat
+    var lng = coords.lng
+    console.log("report at ", lat,lng)
+    sidebar.open('data');
+
+
+    const callEndpoint = async () => {
+        console.log("hey", lat, lng)
+        const response = await fetch('https://stargazr-5l7reasoza-uc.a.run.app/?lat_selected='+lat+'&lng_selected='+lng);
+        const response_json = await response.json(); //extract JSON from the http response
+        console.log(response_json)
+        displayData(response_json)
+        // $("#stargaze-conditions").text(response_json)
+
+    }
+    callEndpoint()
+}
+$("#get-report-btn").on('click', getSGReport);

@@ -259,9 +259,23 @@ a.leaflet-control-zoom-in.leaflet-disabled, a.leaflet-control-zoom-out.leaflet-d
   color: #AAA;
   width: 95%
 }
+/* Results Table */
+.sg-rating-desc{
+  width: 155px;
+}
+.sg-rating-val{
+  width: 40px;
+  border: 1px solid #fff;
+}
+/* .bortle-color{
+    border: 1px solid #fff;
+} */
+/* .table td{
+    border: 1px solid #fff;
+} */
 
 
-/* Bortle Color Key */
+/* Bortle Color Key Table */
 .bortle-desc{
   width: 155px;
 }

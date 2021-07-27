@@ -90,6 +90,39 @@
                     
                     <h4>Selected Coordinates:</h4>
                     <p id="selected-coords-sidebar"> </p>
+
+                    <h4>Conditions:</h4>
+                    <h4 id="stargaze-conditions"></h4>
+
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th class="sg-rating-val" id="sg-rate-cloud"></th>
+                                <td class="sg-rating-desc">Cloud Cover</td>
+                            </tr>
+                            <tr>
+                                <th class="sg-rating-val" id="sg-rate-lp"></th>
+                                <td class="sg-rating-desc">Light Pollution [?]</td>
+                            </tr>
+                            <tr>
+                                <th class="sg-rating-val" id="sg-rate-humidity"></th>
+                                <td class="sg-rating-desc">Humidity</td>
+                            </tr>
+                            <tr>
+                                <th class="sg-rating-val" id="sg-rate-elev"></th>
+                                <td class="sg-rating-desc">Elevation</td>
+                            </tr>
+                            <tr>
+                                <th class="sg-rating-val" id="sg-rate-overall-val"></th>
+                                <td class="sg-rating-desc" id="sg-rate-overall-desc"></td>
+                            </tr>
+                            <tr>
+                                <th class="sg-rating-val" id="sg-rate-lunar"></th>
+                                <td class="sg-rating-desc">Lunar Phase</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     
                 </div>
 
@@ -112,7 +145,7 @@
                         The Light Pollution Multiplier (LPX) is given in terms of multiples of additional brightness from a natural dark sky,
                         where 0 is no additional brightness (perfect dark sky), and inner cities have skies over 40x brighter than natural.
                     </p><p>
-                        Note that Light Pollution measurements are regional estimations based on sattelite data taken in 2016, and may not accurately
+                        Note that Light Pollution measurements are regional estimations based on satellite data taken in 2016, and may not fully
                         reflect the real conditions.
                     </p>
                     <table class="table">
@@ -121,7 +154,7 @@
                                 <th scope="col">Color</th>
                                 <th scope="col">Description</th>
                                 <th scope="col">LPX</th>
-                                <th scope="col">Bortle Scale #</th>
+                                <th scope="col">Bortle</th>
                             </tr>
                         </thead>
                         <tbody>
