@@ -135,10 +135,6 @@ function displayData(response_json){
     status = response_json.status
     lunarphase = (response_json.lunarphase)*100 + "% Full"
 
-    
-
-
-
     $("#sg-rate-cloud").text(cloudCover)
     $("#sg-rate-lp").text(lightPol)
     $("#sg-rate-humidity").text(humidity)
@@ -146,8 +142,6 @@ function displayData(response_json){
     $("#sg-rate-overall-val").text(siteQuality)
     $("#sg-rate-overall-desc").text(siteQualityDiscript)
     $("#sg-rate-lunar").text(lunarphase)
-
-    
 }
 
 
