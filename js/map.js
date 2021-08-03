@@ -142,8 +142,30 @@ function displayData(response_json){
     $("#sg-rate-overall-val").text(siteQuality)
     $("#sg-rate-overall-desc").text(siteQualityDiscript)
     $("#sg-rate-lunar").text(lunarphase)
+
+    console.log(drivingDistance)
+    console.log(CDSChart)
+
+    // $("#sg-rate-drivetime").text(drivingDistance)
+    // $("#sg-rate-csc-name").text(CDSChart.name)
+    // $("#sg-rate-csc-dist").text(CDSChart.dist_km + " km")
+    // $("#sg-rate-csc-img img").attr("src", CDSChart.mimi_img)
+    // $("#sg-rate-csc-img a").href(CDSChart.mimi_img+"key.html?1")
+
 }
 
+
+function Locate({ panTo }) {
+    navigator.geolocation.getCurrentPosition(
+        position => {
+            panTo({
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            });
+        },
+        () => null
+    );
+}
 
 //Stargaze Button Click: Open thing, call API (eventually)
 function getSGReport(lat, lng){

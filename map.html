@@ -120,9 +120,18 @@
                                 <th class="sg-rating-val" id="sg-rate-lunar"></th>
                                 <td class="sg-rating-desc">Lunar Phase</td>
                             </tr>
+                            <tr>
+                                <th class="sg-rating-val" id="sg-rate-drivetime"></th>
+                                <td class="sg-rating-desc">Driving Time</td>
+                            </tr>
                         </tbody>
                     </table>
-
+                    <div>
+                        <div>Clear Sky Chart</div>
+                        <div id="sg-rate-csc-name"></div>
+                        <div id="sg-rate-csc-dist"></div>
+                        <div> <a id="sg-rate-csc-img" > <img src=""></img> </a> </div>
+                    </div>
                     
                 </div>
 
@@ -273,17 +282,54 @@
                         About
                         <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
                     </h1>
-                    <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-                        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                        sanctus est Lorem ipsum dolor sit amet.</p>
+                    <p>
+                        Stargazr begain as a project at <a href="http://sf.sciencehackday.org/hacks-2016/"> Science Hack Day 2016 </a>S, where a team of 8 threw together
+                        a quick and dirty webapp to combine weather and light pollution data. 
+                    </p><p>
+                        It was inspired by a trip to watch the Persid Meteor Shower during which I did extensive planning to find the 
+                        best time and place to go stargazing, but after consulting six different websites to check for weather, 
+                        light pollution, driving distance, and more... a full moon washed out the view of most of the meteors - 
+                        something that I had neglected to check for.
+                    </p><p>
+                        This (Stargazr 2.0) is a more up-to-date, accurate, and functional version of that app.
+                    </p>
+
+                    <h4>Resources:</h4>
+                    <p> This project would not be possible without the existance of the following sites, datasets, and services </p>
+                    <ul>
+                        <!-- <li><a href="https://developers.google.com/earth-engine/#api">Google Earth Engine</a></li> -->
+                        <li><a href="https://darksky.net">Dark Sky weather API</a></li>
+                        <li><a href="http://djlorenz.github.io/astronomy/lp2016/">David Lorenz Light Pollution Atlas (2016 Satellite
+                                Adjusted)</a></li>
+                        <li><a href="http://www.cleardarksky.com/csk/prov/California_map.html">Atilla Danko's Clear Dark Sky Charts</a></li>
+                        <li><a href="http://ngdc.noaa.gov/eog/viirs/download_monthly.html">National Oceanic and Atmospheric Administration
+                                VIIRS DNB Cloud Free Composites</a></li>
+                        <li><a href="http://www.lightpollution.it/worldatlas/pages/fig1.html">Light Pollution and Science Technology
+                                Institute World Atlas</a></li>
+                        <li><a href="https://github.com/noerw/leaflet-sidebar-v2">Leaflet Sidebar</a></li>
+                    </ul>
+
+                    <h4>Talent:</h4>
+                    <p> Stargzr v2 is largely the work of <a href="www.briangcastro.com">Brian Castro </a></p>
+
+                    <p> The Original Stargzr Team consists of:</p>
+                    <ul>
+                        <li><a href="www.briangcastro.com">Brian Castro </a></li>
+                        <li>Roman Gurovich </li>
+                        <li><a href="www.catherinemost.com">Cat Most</a></li>
+                        <li>Jeff Wang </li>
+                        <li>Ramon Simms </li>
+                        <li>Kevin Vo </li>
+                        <li>Xavier Fernandes </li>
+                        <li>Erica Johnson </li>
+                    </ul>
+
                 </div>
 
 
-                <div class="leaflet-sidebar-pane" id="messages">
-                    <h1 class="leaflet-sidebar-header">Messages<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                <div class="leaflet-sidebar-pane" id="whateverelse">
+                    <h1 class="leaflet-sidebar-header">whatever<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                    <p> Something may go here later</p>
                 </div>
             </div>
         </div>
