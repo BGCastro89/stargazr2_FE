@@ -139,6 +139,8 @@ function displayData(response_json){
     lunarPercent = (response_json.lunarphase.lunar_percent) + "% Full"
     lunarPhase = (response_json.lunarphase.lunar_phase)
 
+    $("#no-loc-msg").text("NOTE: This is a WIP Demo!")
+
     $("#sg-rate-cloud").text(cloudCover)
     $("#sg-rate-lp").text(lightPol)
     $("#sg-rate-humidity").text(humidity)
