@@ -114,7 +114,7 @@ function addMarker(e) {
         map.removeLayer(newMarker);
     };
     newMarker = new L.marker(e.latlng).addTo(map);
-    coords = { "lat": e.latlng.lat, "lng": e.latlng.lng }
+    coords = { "lat": e.latlng.lat, "lng": e.latlng.wrap().lng }
     var coodrs_text_lat = formatLat(coords.lat)+",";
     var coords_text_lng = formatLng(coords.lng);
     $("#selected-coords-lat").text(coodrs_text_lat);
