@@ -1,5 +1,8 @@
 // require('dotenv').config();
 // console.log(process.env);
+STARGAZR_PROD_ENDPOINT ="https://stargazr-5l7reasoza-uc.a.run.app"
+STARGAZER_DEV_ENDPOINT = "http://172.18.0.2:8085"
+
 
 // Base Tileset Layers
 mapLink = '<a href="http://openstreetmap.org" target="_blank">OpenStreetMap</a>';
@@ -178,7 +181,7 @@ function getSGReport(lat, lng){
 
     const callEndpoint = async () => {
         console.log("hey", lat, lng)
-        const response = await fetch('https://stargazr-5l7reasoza-uc.a.run.app/?lat_selected='+lat+'&lng_selected='+lng);
+        const response = await fetch(STARGAZER_PROD_ENDPOINT+'?lat_selected='+lat+'&lng_selected='+lng);
         const response_json = await response.json(); //extract JSON from the http response
         console.log(response_json)
         displayData(response_json)
