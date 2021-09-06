@@ -127,10 +127,10 @@ map.on('click', addMarker);
 
 function displayData(response_json){
     CDSChart = response_json.CDSChart
-    cloudCover = response_json.cloudCover * 100 + "%"
+    cloudCover = response_json.cloudCover + "%"
     drivingDistance = response_json.drivingDistance
     elevation = Math.round(response_json.elevation) + " m"
-    humidity = response_json.humidity * 100 + "%"
+    humidity = response_json.humidity + "%"
     lightPol = response_json.lightPol
     precipProb = response_json.precipProb
     siteQuality = Math.round(response_json.siteQuality) 
