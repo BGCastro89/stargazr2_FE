@@ -148,14 +148,22 @@ function displayData(response_json){
     $("#sg-rate-overall-val").text(siteQuality)
     $("#sg-rate-overall-desc").text(siteQualityDiscript)
 
-    // $("#sg-rate-drivetime").text(drivingDistance)
-    // $("#sg-rate-csc-name").text(CDSChart.name)
-    // $("#sg-rate-csc-dist").text(CDSChart.dist_km + " km")
-    // $("#sg-rate-csc-img img").attr("src", CDSChart.mimi_img)
-    // $("#sg-rate-csc-img a").href(CDSChart.mimi_img+"key.html?1")
     $("#sg-rate-lunar-perc").text(lunarPercent)
     $("#sg-rate-lunar-phase").text(lunarPhase)
 
+    if (CDSChart.status != "SUCCESS" ){
+        $("#sg-rate-csc-name").text(CDSChart.status)
+        $("#sg-rate-csc-dist").text("")
+        $("#sg-rate-csc-img").attr("src", "");
+        $("#sg-rate-csc-a").attr("href", "");
+    }
+    else{
+        $("#sg-rate-csc-name").text(CDSChart.name + ", " + CDSChart.loc)
+        $("#sg-rate-csc-name").attr("href", "https://www.cleardarksky.com/c/"+CDSChart.id+"key.html");
+        $("#sg-rate-csc-dist").text(CDSChart.dist_km + " km away")
+        $("#sg-rate-csc-img").attr("src", CDSChart.mini_img);
+        $("#sg-rate-csc-a").attr("href", CDSChart.full_img);
+    }
 }
 
 
