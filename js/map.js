@@ -136,7 +136,8 @@ function displayData(response_json){
     siteQuality = Math.round(response_json.siteQuality) 
     siteQualityDiscript = response_json.siteQualityDiscript
     status = response_json.status
-    lunarphase = (response_json.lunarphase)*100 + "% Full"
+    lunarPercent = (response_json.lunarphase.lunar_percent) + "% Full"
+    lunarPhase = (response_json.lunarphase.lunar_phase)
 
     $("#sg-rate-cloud").text(cloudCover)
     $("#sg-rate-lp").text(lightPol)
@@ -144,16 +145,14 @@ function displayData(response_json){
     $("#sg-rate-elev").text(elevation)
     $("#sg-rate-overall-val").text(siteQuality)
     $("#sg-rate-overall-desc").text(siteQualityDiscript)
-    $("#sg-rate-lunar").text(lunarphase)
-
-    console.log(drivingDistance)
-    console.log(CDSChart)
 
     // $("#sg-rate-drivetime").text(drivingDistance)
     // $("#sg-rate-csc-name").text(CDSChart.name)
     // $("#sg-rate-csc-dist").text(CDSChart.dist_km + " km")
     // $("#sg-rate-csc-img img").attr("src", CDSChart.mimi_img)
     // $("#sg-rate-csc-img a").href(CDSChart.mimi_img+"key.html?1")
+    $("#sg-rate-lunar-perc").text(lunarPercent)
+    $("#sg-rate-lunar-phase").text(lunarPhase)
 
 }
 
